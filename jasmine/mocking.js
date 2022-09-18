@@ -6,4 +6,8 @@ export class MySomethingService {
     getValues = function() {
         return this.repository.getValues();
     }
+
+    getValue = function(id) {
+        return this.repository.getValue(id);
+    }
 }
