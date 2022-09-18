@@ -16,5 +16,13 @@ describe('Mocking An Object', () => {
         expect(mockRepository.getValue).toHaveBeenCalledWith(1);
     });
 
+    it('Should Call getValue and return II', () => {
+        mockRepository.getValue.and.callFake(function() { return "II" });
+        const result  = myService.getValue(2);
+
+
+        expect(mockRepository.getValue).toHaveBeenCalledWith(2);
+        expect(result).toBe("II");
+    });
 
 });
