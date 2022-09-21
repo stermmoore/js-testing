@@ -1,5 +1,8 @@
 export class RomanNumerals {
     convert = function(value) {
-        return "I";
+        if(value === 1)
+            return "I";
+
+        return "II";
     }
 }

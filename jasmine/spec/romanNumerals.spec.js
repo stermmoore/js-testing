@@ -1,11 +1,21 @@
 import { RomanNumerals } from "../romanNumerals.js";
 
 describe("Roman Numerals", function() {
-    it("1 Should Convert To I", function() {
-        const romanNumerals = new RomanNumerals();
+    [{testName: "1 should be I", intValue:1, expectedResult: "I"},
+    {testName: "2 should be II", intValue:2, expectedResult: "II"}
+    ].map(testCase => {
+        it(testCase.testName, function() {
+            const romanNumerals = new RomanNumerals();
+    
+            const result = romanNumerals.convert(testCase.intValue);
+            
+            expect(result).toBe(testCase.expectedResult);
+        });
 
-        const result = romanNumerals.convert(1);
-        
-        expect(result).toBe("I");
-    });
+
+
+    })
+
+
+
   });
