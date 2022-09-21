@@ -3,6 +3,9 @@ export class RomanNumerals {
         if(value === 1)
             return "I";
 
-        return "II";
+        if(value ===2)
+            return "II";
+
+        return "III";
     }
 }
